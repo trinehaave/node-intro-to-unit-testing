@@ -73,9 +73,10 @@ describe ('fizzBuzzer', function(){
         fizzBuzzer(e).should.equal(e);
       })
   })
-  // it('should throw error if input is not a number', function(){
-  //   let fizzTestInput = ['a', '=', undefined];
-  //   fizzTestInput.forEach(function(e){
-  //     fizzBuzzer(e)}.should.throw(Error);
-  // })
+  it('should throw error if input is not a number', function(){
+    let fizzTestInput = ['a', '=', undefined];
+    fizzTestInput.forEach(function(e){
+      (function(){fizzBuzzer(e)}).should.throw(Error);
+    })
+  })
 })
